@@ -8,8 +8,7 @@ public class Guitar {
     private String model;
     private double price;
 
-    public Guitar() {
-    }
+    public Guitar() {}
 
     public Guitar(String brand, String model, double price) {
         this.uuid = UUID.randomUUID();
