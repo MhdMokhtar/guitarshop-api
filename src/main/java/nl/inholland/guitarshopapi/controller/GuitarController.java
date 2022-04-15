@@ -3,11 +3,13 @@ package nl.inholland.guitarshopapi.controller;
 
 import nl.inholland.guitarshopapi.model.Guitar;
 import nl.inholland.guitarshopapi.service.GuitarService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
+import java.util.UUID;
 
 @RestController
 @RequestMapping(value = "guitars", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -35,6 +37,5 @@ public class GuitarController {
         } catch (Exception e) {
             return ResponseEntity.internalServerError().body(Collections.singletonMap("message", e.getMessage()));
         }
-
     }
 }
